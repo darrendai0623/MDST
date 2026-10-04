@@ -1,0 +1,50 @@
+{
+  "input": "/Users/darren/Desktop/MDST/passenger_volume_data.csv",
+  "rows": 2557,
+  "start": "2019-01-01",
+  "end": "2025-12-31",
+  "minimum": {
+    "date": "2020-04-14",
+    "count": 113147.0
+  },
+  "maximum": {
+    "date": "2025-11-30",
+    "count": 3134613.0
+  },
+  "autocorrelation": {
+    "1": 0.8969421785764122,
+    "7": 0.954662419301574,
+    "14": 0.9263895163506753,
+    "28": 0.8833099988541276,
+    "364": 0.21040673496154244,
+    "365": 0.14235942708965105
+  },
+  "stationarity": {
+    "levels": {
+      "ADF_statistic": -1.7312795028838013,
+      "p_value": 0.4150726391999752,
+      "lags": 27,
+      "observations": 2529
+    },
+    "weekly_difference": {
+      "ADF_statistic": -9.073075871665544,
+      "p_value": 4.250292818828298e-15,
+      "lags": 27,
+      "observations": 2522
+    }
+  },
+  "selected_model": "annual_weekday_naive",
+  "mean_backtest_MAE": {
+    "annual_weekday_naive": 79014.46296296296,
+    "trend_weekly_annual_regression": 148189.04495617337,
+    "weekly_naive": 224088.92962962962
+  },
+  "notes": [
+    "Forecast begins after the final observed date, not the current date.",
+    "Model selected on three backtests; scores are not an independent final test.",
+    "No prediction intervals are estimated.",
+    "STL isolates weekly seasonality; its trend also contains annual effects.",
+    "Structural breaks can distort full-series ADF and autocorrelation statistics.",
+    "Counts have no geographic/source definition in the CSV; holiday effects are not modeled."
+  ]
+}
